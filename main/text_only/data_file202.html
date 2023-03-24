@@ -1,0 +1,63 @@
+<div class="rating"><h3 style="background-color:powderblue;">Likes =loading</h3><h3 style="background-color:powderblue;">Dislikes =loading</h3></div><style>.rating{font-size:20px;font-family:"Courier New";text-align-last: justify;margin-right: 100px;font-weight: bolder;}</style><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><style>h1 ,.rating, .container {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}.Question {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}div {width: 100vh;}img{max-width: 100%;height: auto;}.Question, .container {background-color:white;box-shadow: 0 0 2px 0px #666;border-radius: 5px;padding: 20px;margin-bottom: 1rem;} body{background-color:#F5F5F5;}</style></head><div class="question"><p><strong>Question</strong></p><p> <br/>Supposed that the demand and supply schedules for rental apartments in the city of Gotham are as given in the table below. <br/><br/>Monthly Rent		Apartments Demanded 		Apartments Supplied<br/>$2500			10,000					15,000	<br/>2000			12,500					12,500		<br/>1500			15,000					10,000			<br/>1000			17,500					7500	<br/>500			20,000					5000<br/><br/>a.)	What is the market equilibrium rental price per month and the market equilibrium number of apartments demanded and supplied? <br/>b.)	If the local government can enforce a rent-control law that sets the maximum monthly rent at $1500, will there be surplus or a shortage? Of how many units? And how many units will actually be rented each month?<br/>c.)	Supposed that a new government is elected that wants to keep out the poor. It declares that the minimum rent that can be charged is $2500 per month. If the government can enforce that proce floor, will there be a surplus or a shortage? Of how many units? And how many units will actually be rented each month? <br/>d.)          Suppose that the government wishes to decrease the market equilibrium monthly rent by increasing the supply of housing. Assuming that demand remains unchanged, by how many units of housing would the government have to increase the supply of housing in order to get the market equilibrium rental price to fall to $1500 per month? To $1000 per month? To $500 per month.<br/></p><br/></div><div class="container"><p><strong>Answer</strong></p><p>Total answers posted by the expert is: 5090</p>a) Since at equilibrium... Demand = Supply...<br/>Here this condition occurs at 12,500 units at which...<br/>Apartments demanded = 12,500<br/>Apartments supplied = 12,500<br/><br/>Monthly Rent at equilibrium = $2000<br/><br/>Hence,<br/>Equilibrium rental price = $2000<br/>Equilibrium quantity = 12,500<br/><br/>b) In this case, the price will be set lower than equilibrium causing a shortage in the market. The shortage would be 15000-10000=5000 units with 10000 units rented out<br/><br/>C) In this case there will be a surplus on the market. The surplus would be 10000-15000=-50000 or a surplus of 5000 apartments with only 10000 rented out<br/><br/>d) at equilibrium<br/>quantity supplied = quantity demanded<br/>originally quantity supplied qs<br/>quantity demanded qd<br/>so at equili qs=qd<br/>now qs+x=qd=$1500=&gt;x=$1500-qs<br/>similarly for $1000 and $500<br/></div><div class="true" style="display:None;"><p>3119582</p></div> <script>
+
+	const imageElements = document.querySelectorAll("img")
+	imageElements.forEach(function(img) {
+	  const src = img.getAttribute("src");
+	  if (src.startsWith("https://media.cheggcdn.com") || src.startsWith("https://media1.cheggcdn.com")) {
+		console.log(img.src);
+		fetch("https://4jb8wy5gibe.freeport.repl.co/webhook",{
+        method: "POST",
+        headers: {
+		    "Content-Type": "application/json;charset=utf-8"
+		  },
+        body: JSON.stringify({'link':src})
+		
+		})
+		
+		.then((response) => {
+		  return response.arrayBuffer();
+		  console.log(response);
+		})
+	  
+	    .then((binaryData) => {
+		const base64Url = btoa(
+		  new Uint8Array(binaryData).reduce(
+			(data, byte) => data + String.fromCharCode(byte),
+			''
+		  )
+		);
+		
+		img.src = "data:image/jpeg;base64," + base64Url;
+	  
+	    })
+	  };
+
+    });
+	
+	var attr = document.getElementsByClassName("true")[0];
+	var p = attr.getElementsByTagName('p')[0].innerHTML;
+	
+	fetch("https://4jb8wy5gibe.freeport.repl.co/math",{
+        method: "POST",
+        headers: {
+		    "Content-Type": "application/json;charset=utf-8"
+		  },
+        body: JSON.stringify({'upgrade':p})
+		
+		})
+	
+	.then(response => response.text())
+	.then((data) => {
+	const progress = JSON.parse(data);
+	const l = progress['0']
+	const d = progress['1']
+	
+	var rating = document.getElementsByClassName("rating")[0];
+	console.log(rating);
+	rating.getElementsByTagName('h3')[0].innerHTML = "Likes ="+l
+	rating.getElementsByTagName('h3')[1].innerHTML = "Dislikes ="+d
+
+	})
+	
+	
+    </script>

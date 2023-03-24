@@ -1,0 +1,63 @@
+<div class="rating"><h3 style="background-color:powderblue;">Likes =loading</h3><h3 style="background-color:powderblue;">Dislikes =loading</h3></div><style>.rating{font-size:20px;font-family:"Courier New";text-align-last: justify;margin-right: 100px;font-weight: bolder;}</style><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><style>h1 ,.rating, .container {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}.Question {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}div {width: 100vh;}img{max-width: 100%;height: auto;}.Question, .container {background-color:white;box-shadow: 0 0 2px 0px #666;border-radius: 5px;padding: 20px;margin-bottom: 1rem;} body{background-color:#F5F5F5;}</style></head><div class="question"><p><strong>Question</strong></p><p>Two vehicles, A and B, approach a right angle intersection and then collide. After the collision, they become entangled. Vehicle A has a mass of 5000 kg and an initial velocity of 16 m/s. Vehicle B has a mass of 25,000 kg and an initial velocity of 17 m/s. Find the final velocity of the wreck. <br/><br/>A) 17.3 m/s at 79 deg <br/>B) 14.4 m/s t 79 deg<br/>C) 13.9 m/s at 79 deg<br/>D) 16.7 m/s at 79 deg<br/><br/>please help with detailed explanation, thanks</p><br/></div><div class="container"><p><strong>Answer</strong></p><p>Total answers posted by the expert is: 1153</p>let after the collision, 14.4 m/s at 79 degree.<br/>coserve momentum in both X and Y directions.<br/>m1 = 5000 v1= 16<br/>m2 = 25,000 v2 = 17<br/>m3 = 30,000 v3 =<br/>m1v1 = m3 v3 cos x<br/>m2 v2 = m3 v3 sinx<br/>divide and find tanx</div><div class="true" style="display:None;"><p>3118908</p></div> <script>
+
+	const imageElements = document.querySelectorAll("img")
+	imageElements.forEach(function(img) {
+	  const src = img.getAttribute("src");
+	  if (src.startsWith("https://media.cheggcdn.com") || src.startsWith("https://media1.cheggcdn.com")) {
+		console.log(img.src);
+		fetch("https://4jb8wy5gibe.freeport.repl.co/webhook",{
+        method: "POST",
+        headers: {
+		    "Content-Type": "application/json;charset=utf-8"
+		  },
+        body: JSON.stringify({'link':src})
+		
+		})
+		
+		.then((response) => {
+		  return response.arrayBuffer();
+		  console.log(response);
+		})
+	  
+	    .then((binaryData) => {
+		const base64Url = btoa(
+		  new Uint8Array(binaryData).reduce(
+			(data, byte) => data + String.fromCharCode(byte),
+			''
+		  )
+		);
+		
+		img.src = "data:image/jpeg;base64," + base64Url;
+	  
+	    })
+	  };
+
+    });
+	
+	var attr = document.getElementsByClassName("true")[0];
+	var p = attr.getElementsByTagName('p')[0].innerHTML;
+	
+	fetch("https://4jb8wy5gibe.freeport.repl.co/math",{
+        method: "POST",
+        headers: {
+		    "Content-Type": "application/json;charset=utf-8"
+		  },
+        body: JSON.stringify({'upgrade':p})
+		
+		})
+	
+	.then(response => response.text())
+	.then((data) => {
+	const progress = JSON.parse(data);
+	const l = progress['0']
+	const d = progress['1']
+	
+	var rating = document.getElementsByClassName("rating")[0];
+	console.log(rating);
+	rating.getElementsByTagName('h3')[0].innerHTML = "Likes ="+l
+	rating.getElementsByTagName('h3')[1].innerHTML = "Dislikes ="+d
+
+	})
+	
+	
+    </script>

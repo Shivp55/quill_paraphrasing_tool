@@ -1,0 +1,3 @@
+Question
+A box contains a mixture of small copper spheres and small lead spheres. The total volume of both metals is measured by the displacement of water to be 423 cubic centimeters and the total mass is 4.30kg.
+What percentage of the spheres are copper?

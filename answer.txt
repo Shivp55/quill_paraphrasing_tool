@@ -1,0 +1,18 @@
+Answer
+
+mass Cu + mass Pb = 4360 g
+V = mass / density
+density Cu ( let x)= 8.94 g/cm^3
+volume Cu = mass / 8.94
+density Pb ( let y)= 11.34 g/cm^3
+volume Pb = mass / 11.34
+x + y = 4360
+x / 8.94 + y / 11.34 = 427
+x = 4360 - y
+4360 - y / 8.94 + y / 11.34 = 423
+49442 - 11.34 y + 8.94 y = 42914
+- 2.4 y = - 6528
+y = 2720 g => 2.72 Kg
+mass Cu = 4.36 - 2.72 = 1.64 Kg
+% Cu = 1.64 x 100/ 4.36 =38.1%
+3118388

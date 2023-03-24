@@ -1,0 +1,63 @@
+<div class="rating"><h3 style="background-color:powderblue;">Likes =loading</h3><h3 style="background-color:powderblue;">Dislikes =loading</h3></div><style>.rating{font-size:20px;font-family:"Courier New";text-align-last: justify;margin-right: 100px;font-weight: bolder;}</style><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><style>h1 ,.rating, .container {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}.Question {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}div {width: 100vh;}img{max-width: 100%;height: auto;}.Question, .container {background-color:white;box-shadow: 0 0 2px 0px #666;border-radius: 5px;padding: 20px;margin-bottom: 1rem;} body{background-color:#F5F5F5;}</style></head><div class="question"><p><strong>Question</strong></p><p>A physics professor, equipped with a rocket backpack, steps out of a helicopter at an altitude of 592 m with zero initial velocity. (Neglect air resistance.) For 8.5 s, she falls freely. At that time, she fires her rockets and slows her rate of descent at 16 m/s2 until her rate of descent reaches 5.4 m/s. At this point, she adjusts her rocket engine controls to maintain that rate of descent until she reaches the ground.<br/>(a) On a single graph, sketch her acceleration and velocity as functions of time. (Take upward to be positive.)<br/><br/>(b) What is her speed at the end of the first 8.5 s? <br/> <br/><br/>(c) What is the duration of her slowing-down period? <br/> <br/><br/>(d) How far does she travel while slowing down? <br/> <br/><br/>(e) How much time is required for the entire trip from the helicopter to the ground? <br/> <br/><br/>(f) What is her average velocity for the entire trip? <br/> <br/><br/></p><br/></div><div class="container"><p><strong>Answer</strong></p><p>Total answers posted by the expert is: 4821</p>b. v =u +a t<br/>or, because a01 = g and v0 = 0,<br/>v = gt<br/>Substitute numerical values and<br/>evaluate v1:<br/>9.81m/s * 8.0 s= 78.5m/s<br/><br/>c. t=(78.5-5)/15<br/>=4.9secs<br/><br/>d. (78.5+5)/2=41.7m/s<br/><br/>e. delta T=8+4.9+(56.7/5)=24.4secs<br/><br/>f. Vav=-575/24.4=-24m/s</div><div class="true" style="display:None;"><p>3119140</p></div> <script>
+
+	const imageElements = document.querySelectorAll("img")
+	imageElements.forEach(function(img) {
+	  const src = img.getAttribute("src");
+	  if (src.startsWith("https://media.cheggcdn.com") || src.startsWith("https://media1.cheggcdn.com")) {
+		console.log(img.src);
+		fetch("https://4jb8wy5gibe.freeport.repl.co/webhook",{
+        method: "POST",
+        headers: {
+		    "Content-Type": "application/json;charset=utf-8"
+		  },
+        body: JSON.stringify({'link':src})
+		
+		})
+		
+		.then((response) => {
+		  return response.arrayBuffer();
+		  console.log(response);
+		})
+	  
+	    .then((binaryData) => {
+		const base64Url = btoa(
+		  new Uint8Array(binaryData).reduce(
+			(data, byte) => data + String.fromCharCode(byte),
+			''
+		  )
+		);
+		
+		img.src = "data:image/jpeg;base64," + base64Url;
+	  
+	    })
+	  };
+
+    });
+	
+	var attr = document.getElementsByClassName("true")[0];
+	var p = attr.getElementsByTagName('p')[0].innerHTML;
+	
+	fetch("https://4jb8wy5gibe.freeport.repl.co/math",{
+        method: "POST",
+        headers: {
+		    "Content-Type": "application/json;charset=utf-8"
+		  },
+        body: JSON.stringify({'upgrade':p})
+		
+		})
+	
+	.then(response => response.text())
+	.then((data) => {
+	const progress = JSON.parse(data);
+	const l = progress['0']
+	const d = progress['1']
+	
+	var rating = document.getElementsByClassName("rating")[0];
+	console.log(rating);
+	rating.getElementsByTagName('h3')[0].innerHTML = "Likes ="+l
+	rating.getElementsByTagName('h3')[1].innerHTML = "Dislikes ="+d
+
+	})
+	
+	
+    </script>

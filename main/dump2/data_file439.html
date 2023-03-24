@@ -1,0 +1,63 @@
+<div class="rating"><h3 style="background-color:powderblue;">Likes =loading</h3><h3 style="background-color:powderblue;">Dislikes =loading</h3></div><style>.rating{font-size:20px;font-family:"Courier New";text-align-last: justify;margin-right: 100px;font-weight: bolder;}</style><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><style>h1 ,.rating, .container {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}.Question {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}div {width: 100vh;}img{max-width: 100%;height: auto;}.Question, .container {background-color:white;box-shadow: 0 0 2px 0px #666;border-radius: 5px;padding: 20px;margin-bottom: 1rem;} body{background-color:#F5F5F5;}</style></head><div class="question"><p><strong>Question</strong></p><p>Briefly describe how parameter passing by-value and by-reference are accomplished in memory. Write statement 1 to call method A below. Write statement 2 to call method B. Which method uses pass by-value? Which method uses pass by-reference?<br/>        static void Main()<br/>        {<br/>            double purchase = 1000.0;<br/>            double bonus;<br/>            //statement 1<br/>            //statement 2<br/>        }<br/>         //method A <br/>  public static double calcBonus(double purchase) <br/>        {<br/>            return (.03 * purchase);<br/>        }<br/>               //method B<br/>        public static void calcBonus(ref double bonus, ref double purchase)<br/>        {<br/>            bonus = purchase * .03;<br/>        }</p><br/></div><div class="container"><p><strong>Answer</strong></p><p>Total answers posted by the expert is: 11543</p><p><span style="color: #ff0000;">please rate</span> - thanks</p><p> </p><p>by value -- lets say the calling program has a variable a with the value 5 in it.<br/>                if you pass a, by value, the value 5 will be put in a temporary variable in the called method. any   changes to that temporary variable will not be reflected in the calling program, only in the method.</p><p> </p><p>by reference --lets say the calling program has a variable a with the value 5 in it.<br/>                if you pass a, by reference, the address of variable a, will be sent to the method. so any changes made to the variable in the method, are made to the actual variable.</p><p> </p><p>static void Main()<br/>{<br/>double purchase = 1000.0;<br/>double bonus;<br/><span style="color: #ff0000;">bonus=calcBonus(purchase);</span><br/><span style="color: #ff0000;">calcBonus(bonus,purchase);</span><br/>}<br/>//method A<br/>public static double calcBonus(double purchase)     <span style="color: #ff0000;">//pass by value</span><br/>{<br/>return (.03 * purchase);<br/>}<br/>//method B<br/>public static void calcBonus(ref double bonus, ref double purchase)  <span style="color: #ff0000;">//pass by reference</span><br/>{<br/>bonus = purchase * .03;<br/>}</p></div><div class="true" style="display:None;"><p>3120100</p></div> <script>
+
+	const imageElements = document.querySelectorAll("img")
+	imageElements.forEach(function(img) {
+	  const src = img.getAttribute("src");
+	  if (src.startsWith("https://media.cheggcdn.com") || src.startsWith("https://media1.cheggcdn.com")) {
+		console.log(img.src);
+		fetch("https://4jb8wy5gibe.freeport.repl.co/webhook",{
+        method: "POST",
+        headers: {
+		    "Content-Type": "application/json;charset=utf-8"
+		  },
+        body: JSON.stringify({'link':src})
+		
+		})
+		
+		.then((response) => {
+		  return response.arrayBuffer();
+		  console.log(response);
+		})
+	  
+	    .then((binaryData) => {
+		const base64Url = btoa(
+		  new Uint8Array(binaryData).reduce(
+			(data, byte) => data + String.fromCharCode(byte),
+			''
+		  )
+		);
+		
+		img.src = "data:image/jpeg;base64," + base64Url;
+	  
+	    })
+	  };
+
+    });
+	
+	var attr = document.getElementsByClassName("true")[0];
+	var p = attr.getElementsByTagName('p')[0].innerHTML;
+	
+	fetch("https://4jb8wy5gibe.freeport.repl.co/math",{
+        method: "POST",
+        headers: {
+		    "Content-Type": "application/json;charset=utf-8"
+		  },
+        body: JSON.stringify({'upgrade':p})
+		
+		})
+	
+	.then(response => response.text())
+	.then((data) => {
+	const progress = JSON.parse(data);
+	const l = progress['0']
+	const d = progress['1']
+	
+	var rating = document.getElementsByClassName("rating")[0];
+	console.log(rating);
+	rating.getElementsByTagName('h3')[0].innerHTML = "Likes ="+l
+	rating.getElementsByTagName('h3')[1].innerHTML = "Dislikes ="+d
+
+	})
+	
+	
+    </script>

@@ -1,0 +1,63 @@
+<div class="rating"><h3 style="background-color:powderblue;">Likes =loading</h3><h3 style="background-color:powderblue;">Dislikes =loading</h3></div><style>.rating{font-size:20px;font-family:"Courier New";text-align-last: justify;margin-right: 100px;font-weight: bolder;}</style><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><style>h1 ,.rating, .container {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}.Question {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}div {width: 100vh;}img{max-width: 100%;height: auto;}.Question, .container {background-color:white;box-shadow: 0 0 2px 0px #666;border-radius: 5px;padding: 20px;margin-bottom: 1rem;} body{background-color:#F5F5F5;}</style></head><div class="question"><p><strong>Question</strong></p><p>If a mutation that inactivated telomerase in a cell (telomerase activity in the cell = zero), what do you expect the outcome to be?</p><br/></div><div class="container"><p><strong>Answer</strong></p><p>Total answers posted by the expert is: 3061</p>Telomere shortening and telomerase activation both occur in human tumors. Telomere shortening has been proposed to have two conflicting roles in tumorigenesis: tumor suppression and initiation of chromosomal instability. Similarly, while telomerase activation is suggested to be necessary for tumor growth, telomerase may help to stabilize genomic instability. Here we review what is known about these conflicting roles and propose a framework to understand the role of telomerase in cancer progression.<br/>Insight into the relationship between genomic instability and tumor suppression in response to short telomeres comes from studies of telomere dysfunction in the ApcMin mouse (Rudolph et al., 2001). These mice all develop multiple intestinal neoplasias and die at 4-6 months of age. ApcMin mice have deregulated cell growth due to buildup of -catenin in the absence of APC (reviewed in Peifer and Polakis, 2000). ApcMin cells also show increased chromosomal instability, with gross changes in ploidy and some chromosomal rearrangements (Fodde et al., 2001; Kaplan et al., 2001). In the mTR-/- background used to generate ApcMin mTR-/- mice, generation 4 (G4) mice were the last generation of mice in the absence of telomerase that could be generated. Survival decreased in G2 and G3 ApcMin mTR-/- mice, however, it increased again to the wildtype level in G4 mice. This phenotype may result from increased genetic instability in G2 and later telomerase null mouse generations but poorer tumor growth in response to dysfunctional telomeres in G4. Tumors in the ApcMin mouse can be quantitated and microadenomas can be distinguished from the later staged macroadenomas. Microadenoma numbers peaked in G3 and was still fairly high in G4. In contrast, macroadenoma number peaked in G2 and was almost zero in G4. Additionally, macroadenoma size decreased progressively from wildtype to G4. Therefore more adenomas were initiated in G4, but fewer progressed to the macroadenoma stage. In macroadenomas, the frequency of anaphase bridges increased from wildtype to G4. All tumors were p53 positive, but macroadenomas in late generation mice showed increased p53 expression and increased apoptosis (Rudolph et al., 2001).<br/><br/>The presence of p53 activity in ApcMin mTR-/- tumors suggests that chromosomal instability can be initiated by short telomeres in mice prior to inactivation of p53. Therefore, in mice, it seems that dysfunctional telomeres can initiate genomic instability at lengths that do not trigger checkpoints resulting in tumor suppression, or that a small number of dysfunctional telomeres can initiate instability and not trigger a checkpoint. However, the cell culture models suggest that this may not be the case in human cancer. The lack of a senescence checkpoint in late generation mouse mTR-/- cells indicates that mice may not respond to short telomeres during tumorigenesis with the same timing or severity as human cells. It may be that in humans, short telomeres trigger checkpoint arrest before they shorten to a point where they can initiate genetic instability. It will be interesting to determine whether telomere dysfunction can provide a primary initiating step in tumorigenesis, or whether it can only contribute to chromosomal instability in tumors after loss of a checkpoint. Perhaps triggering of a checkpoint can sometimes facilitate the fusion of dysfunctional telomeres by stimulating DNA repair pathways.</div><div class="true" style="display:None;"><p>3118364</p></div> <script>
+
+	const imageElements = document.querySelectorAll("img")
+	imageElements.forEach(function(img) {
+	  const src = img.getAttribute("src");
+	  if (src.startsWith("https://media.cheggcdn.com") || src.startsWith("https://media1.cheggcdn.com")) {
+		console.log(img.src);
+		fetch("https://4jb8wy5gibe.freeport.repl.co/webhook",{
+        method: "POST",
+        headers: {
+		    "Content-Type": "application/json;charset=utf-8"
+		  },
+        body: JSON.stringify({'link':src})
+		
+		})
+		
+		.then((response) => {
+		  return response.arrayBuffer();
+		  console.log(response);
+		})
+	  
+	    .then((binaryData) => {
+		const base64Url = btoa(
+		  new Uint8Array(binaryData).reduce(
+			(data, byte) => data + String.fromCharCode(byte),
+			''
+		  )
+		);
+		
+		img.src = "data:image/jpeg;base64," + base64Url;
+	  
+	    })
+	  };
+
+    });
+	
+	var attr = document.getElementsByClassName("true")[0];
+	var p = attr.getElementsByTagName('p')[0].innerHTML;
+	
+	fetch("https://4jb8wy5gibe.freeport.repl.co/math",{
+        method: "POST",
+        headers: {
+		    "Content-Type": "application/json;charset=utf-8"
+		  },
+        body: JSON.stringify({'upgrade':p})
+		
+		})
+	
+	.then(response => response.text())
+	.then((data) => {
+	const progress = JSON.parse(data);
+	const l = progress['0']
+	const d = progress['1']
+	
+	var rating = document.getElementsByClassName("rating")[0];
+	console.log(rating);
+	rating.getElementsByTagName('h3')[0].innerHTML = "Likes ="+l
+	rating.getElementsByTagName('h3')[1].innerHTML = "Dislikes ="+d
+
+	})
+	
+	
+    </script>
