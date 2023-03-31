@@ -1,0 +1,11 @@
+Question
+Gold, which has a density of 19.32 g/cm3, is the most ductile metal and can be pressed into a thin leaf or drawn out into a long fiber. (a) If a sample of gold with a mass of 7.705 g, is pressed into a leaf of 5.949 ?m thickness, what is the area (in m2) of the leaf? (b) If, instead, the gold is drawn out into a cylindrical fiber of radius 2.500 ?m, what is the length (in m) of the fiber? explain
+
+Answer
+
+a.) Find the revenue function R(q), the Profit function P(q), the marginal revenue function R'(q), and marginal cost C'(q). Find the production level q at which P(q) is at its highest level.
+Profit P(q)=q((37-2q)-(3q2+5q+75))=-3q3-7q2-38q, where R(q)=q*(37-2q)=37q-2q2
+Marginal revenue = (dR/dq) = 37-4q and marginal cost = (dC/dq) = 6q+5
+When dP/dq=0, P(q) is maximised.
+I'm not sure about the p(q),C(q) functions since we're getting a loss.
+3120128

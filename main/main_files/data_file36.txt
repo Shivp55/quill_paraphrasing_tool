@@ -1,0 +1,8 @@
+Question
+Gold, which has a density of 19.32 g/cm3, is the most ductile metal and can be pressed into a thin leaf or drawn out into a long fiber. (a) If a sample of gold with a mass of 7.705 g, is pressed into a leaf of 5.949 ?m thickness, what is the area (in m2) of the leaf? (b) If, instead, the gold is drawn out into a cylindrical fiber of radius 2.500 ?m, what is the length (in m) of the fiber? explain
+
+Answer
+
+Since f(x;theta) = (1/theta), e-x/theta will have variance equal to theta, and X bar = (x1+x2+x3+...xn)/n, theta is the variance of x1, x2, x3, and xn.
+Var(X bar) = ((var(x1) + var(x2) + var(x3) +
+var(xn)2)/n2) = n x theta2/n2 = theta2/n 3119092

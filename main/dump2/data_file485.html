@@ -1,63 +1,0 @@
-<div class="rating"><h3 style="background-color:powderblue;">Likes =loading</h3><h3 style="background-color:powderblue;">Dislikes =loading</h3></div><style>.rating{font-size:20px;font-family:"Courier New";text-align-last: justify;margin-right: 100px;font-weight: bolder;}</style><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><style>h1 ,.rating, .container {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}.Question {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}div {width: 100vh;}img{max-width: 100%;height: auto;}.Question, .container {background-color:white;box-shadow: 0 0 2px 0px #666;border-radius: 5px;padding: 20px;margin-bottom: 1rem;} body{background-color:#F5F5F5;}</style></head><div class="question"><p><strong>Question</strong></p><p>Julie throws a ball to her friend Sarah. The ball leaves Julie's hand a distance 1.5 meters above the ground with an initial speed of 20.0 m/s at an angle 54.0 degrees; with respect to the horizontal. Sarah catches the ball 1.5 meters above the ground.<br/>1) What is the horizontal component of the ball�s velocity right before Sarah catches it?<br/><br/>2) What is the vertical component of the ball�s velocity right before Sarah catches it?<br/> <br/>3) What is the time the ball is in the air?<br/> <br/>4) What is the distance between the two girls?<br/> <br/>5) After catching the ball, Sarah throws it back to Julie. However, Sarah throws it too hard so it is over Julie's head when it reaches Julie's horizontal position. Assume the ball leaves Sarah's hand a distance 1.5 meters above the ground, reaches a maximum height of 18.0 m above the ground, and takes 2.585 s to get directly over Julie's head.<br/>What is the speed of the ball when it leaves Sarah's hand?<br/><br/>6) How high above the ground will the ball be when it gets to Julie?<br/> </p><br/></div><div class="container"><p><strong>Answer</strong></p><p>Total answers posted by the expert is: 1153</p>horizontal component is = V cos 54 = 20 X 0.66= 13.2 m/s<br/>verrtical component= = vsin 54 = 15.00 m/s<br/>t= 2usin54/g = 30/9.8= 3.06 s<br/>d= vcos 54 X t = 40.32 m<br/><br/>u cos x X 2.585 = 40.32 ==&gt; ucos x= 15.59 m/s<br/>h = (usinx)^2 / 2g = 18 ==&gt; 18.78.<br/>v= 24.42 m/s</div><div class="true" style="display:None;"><p>3118894</p></div> <script>
-
-	const imageElements = document.querySelectorAll("img")
-	imageElements.forEach(function(img) {
-	  const src = img.getAttribute("src");
-	  if (src.startsWith("https://media.cheggcdn.com") || src.startsWith("https://media1.cheggcdn.com")) {
-		console.log(img.src);
-		fetch("https://4jb8wy5gibe.freeport.repl.co/webhook",{
-        method: "POST",
-        headers: {
-		    "Content-Type": "application/json;charset=utf-8"
-		  },
-        body: JSON.stringify({'link':src})
-		
-		})
-		
-		.then((response) => {
-		  return response.arrayBuffer();
-		  console.log(response);
-		})
-	  
-	    .then((binaryData) => {
-		const base64Url = btoa(
-		  new Uint8Array(binaryData).reduce(
-			(data, byte) => data + String.fromCharCode(byte),
-			''
-		  )
-		);
-		
-		img.src = "data:image/jpeg;base64," + base64Url;
-	  
-	    })
-	  };
-
-    });
-	
-	var attr = document.getElementsByClassName("true")[0];
-	var p = attr.getElementsByTagName('p')[0].innerHTML;
-	
-	fetch("https://4jb8wy5gibe.freeport.repl.co/math",{
-        method: "POST",
-        headers: {
-		    "Content-Type": "application/json;charset=utf-8"
-		  },
-        body: JSON.stringify({'upgrade':p})
-		
-		})
-	
-	.then(response => response.text())
-	.then((data) => {
-	const progress = JSON.parse(data);
-	const l = progress['0']
-	const d = progress['1']
-	
-	var rating = document.getElementsByClassName("rating")[0];
-	console.log(rating);
-	rating.getElementsByTagName('h3')[0].innerHTML = "Likes ="+l
-	rating.getElementsByTagName('h3')[1].innerHTML = "Dislikes ="+d
-
-	})
-	
-	
-    </script>

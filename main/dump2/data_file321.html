@@ -1,63 +1,0 @@
-<div class="rating"><h3 style="background-color:powderblue;">Likes =loading</h3><h3 style="background-color:powderblue;">Dislikes =loading</h3></div><style>.rating{font-size:20px;font-family:"Courier New";text-align-last: justify;margin-right: 100px;font-weight: bolder;}</style><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><style>h1 ,.rating, .container {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}.Question {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}div {width: 100vh;}img{max-width: 100%;height: auto;}.Question, .container {background-color:white;box-shadow: 0 0 2px 0px #666;border-radius: 5px;padding: 20px;margin-bottom: 1rem;} body{background-color:#F5F5F5;}</style></head><div class="question"><p><strong>Question</strong></p><p>Exhibit 10-1<br/>(The following data apply to the problem(s) below.)<br/><br/>You are employed by CGT, a Fortune 500 firm that is a major producer of chemicals and plastics, including plastic grocery bags, styrofoam cups, and fertilizers. You are on the corporate staff as an assistant to the CFO. This is a position with high visibility and the opportunity for rapid advancement, providing you make the right decisions. Your boss has asked you to estimate the weighted average cost of capital for the company. The balance sheet and some other information about CGT follows below.<br/><br/>Assets	<br/>Current assets	$  38,000,000<br/>Net plant, property, and equipment	  101,000,000<br/>Total assets	$139,000,000<br/> <br/>Liabilities and equity	<br/>Accounts payable	$  10,000,000<br/>Accruals	      9,000,000<br/>Current liabilities	$  19,000,000<br/>Long term debt (40,000 bonds, $1,000 par value)	    40,000,000<br/>Total liabilities	59,000,000<br/>Common stock (10,000,000 shares)	30,000,000<br/>Retained earnings	    50,000,000<br/>Total shareholders equity	80,000,000<br/>Total liabilities and shareholders equity	$139,000,000<br/><br/>You check The Wall Street Journal and see that CGT stock is currently selling for $7.50 per share and that CGT bonds are selling for $875.00 per bond. The bonds have a S1,000 par value, a 7.25% annual coupon rate, semiannual payments, are not callable, and a 20-year maturity. CGT's beta is 1.25, the yield on a 6-month Treasury bill is 3.50%, and the yield on a 20-year Treasury bond is 5.50%. The expected return on the stock market is 11.50%, but the market has had an average annual return of 14.50% during the past 5 years. CGT is in the 40% tax bracket.<br/><br/>____	24.	Refer to Exhibit 10-1. What is the best estimate of the after-tax cost of debt for CGT?<br/>a.	4.64%<br/>b.	4.88%<br/>c.	5.14%<br/>d.	5.40%<br/>e.	5.67%<br/><br/><br/>____	25.	Refer to Exhibit 10-1. Using the CAPM approach, what is the best estimate of the cost of equity for CGT?<br/>a.	13.00%<br/>b.	13.52%<br/>c.	14.06%<br/>d.	14.62%<br/>e.	15.21%<br/><br/><br/>____	26.	Refer to Exhibit 10-1. Which of the following is the best estimate for the weights to be used when calculating the WACC?<br/>a.	wc = 68.2%; wd = 31.8%<br/>b.	wc = 69.9%; wd = 30.1%<br/>c.	wc = 71.6%; wd = 28.4%<br/>d.	wc = 73.4%; wd = 26.6%<br/>e.	wc = 75.3%; wd = 24.7%<br/><br/><br/>____	27.	Refer to Exhibit 10-1. What is the best estimate of the WACC for CGT?<br/>a.	9.88%<br/>b.	10.18%<br/>c.	10.50%<br/>d.	10.81%<br/>e.	11.14%<br/></p><br/></div><div class="container"><p><strong>Answer</strong></p><p>Total answers posted by the expert is: 5090</p>Multiple questions are not allowed in a single post. please post each questions in a different post. i have answered the first one.<br/><br/>24. c 5.14%<br/>875.00= 36.25PVIFA(x,40)+1000PVIFA(x,40)<br/>x= 4.28%<br/>Annual interest= 4.28x2= 8.56%<br/>the after-tax cost of debt= 8.56(1-.4)= 5.136% or 5.14%<br/></div><div class="true" style="display:None;"><p>3119828</p></div> <script>
-
-	const imageElements = document.querySelectorAll("img")
-	imageElements.forEach(function(img) {
-	  const src = img.getAttribute("src");
-	  if (src.startsWith("https://media.cheggcdn.com") || src.startsWith("https://media1.cheggcdn.com")) {
-		console.log(img.src);
-		fetch("https://4jb8wy5gibe.freeport.repl.co/webhook",{
-        method: "POST",
-        headers: {
-		    "Content-Type": "application/json;charset=utf-8"
-		  },
-        body: JSON.stringify({'link':src})
-		
-		})
-		
-		.then((response) => {
-		  return response.arrayBuffer();
-		  console.log(response);
-		})
-	  
-	    .then((binaryData) => {
-		const base64Url = btoa(
-		  new Uint8Array(binaryData).reduce(
-			(data, byte) => data + String.fromCharCode(byte),
-			''
-		  )
-		);
-		
-		img.src = "data:image/jpeg;base64," + base64Url;
-	  
-	    })
-	  };
-
-    });
-	
-	var attr = document.getElementsByClassName("true")[0];
-	var p = attr.getElementsByTagName('p')[0].innerHTML;
-	
-	fetch("https://4jb8wy5gibe.freeport.repl.co/math",{
-        method: "POST",
-        headers: {
-		    "Content-Type": "application/json;charset=utf-8"
-		  },
-        body: JSON.stringify({'upgrade':p})
-		
-		})
-	
-	.then(response => response.text())
-	.then((data) => {
-	const progress = JSON.parse(data);
-	const l = progress['0']
-	const d = progress['1']
-	
-	var rating = document.getElementsByClassName("rating")[0];
-	console.log(rating);
-	rating.getElementsByTagName('h3')[0].innerHTML = "Likes ="+l
-	rating.getElementsByTagName('h3')[1].innerHTML = "Dislikes ="+d
-
-	})
-	
-	
-    </script>

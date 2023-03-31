@@ -1,0 +1,9 @@
+Question
+Gold, which has a density of 19.32 g/cm3, is the most ductile metal and can be pressed into a thin leaf or drawn out into a long fiber. (a) If a sample of gold with a mass of 7.705 g, is pressed into a leaf of 5.949 ?m thickness, what is the area (in m2) of the leaf? (b) If, instead, the gold is drawn out into a cylindrical fiber of radius 2.500 ?m, what is the length (in m) of the fiber? explain
+
+Answer
+
+14.4 m/s at 79 degrees after the collision, if you will.
+save forward and backward motion.
+m1=5000 v1=16 m2=25,000 v2=17 m3=30,000 v3=m1v1=m3v3cosx m2v2=m3v3sinx
+Divide by 8 to get Tanx 3118908

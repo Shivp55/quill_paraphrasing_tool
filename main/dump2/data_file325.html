@@ -1,63 +1,0 @@
-<div class="rating"><h3 style="background-color:powderblue;">Likes =loading</h3><h3 style="background-color:powderblue;">Dislikes =loading</h3></div><style>.rating{font-size:20px;font-family:"Courier New";text-align-last: justify;margin-right: 100px;font-weight: bolder;}</style><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><style>h1 ,.rating, .container {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}.Question {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}div {width: 100vh;}img{max-width: 100%;height: auto;}.Question, .container {background-color:white;box-shadow: 0 0 2px 0px #666;border-radius: 5px;padding: 20px;margin-bottom: 1rem;} body{background-color:#F5F5F5;}</style></head><div class="question"><p><strong>Question</strong></p><p>Mihov Inc. hired you as a consultant to help estimate its cost of capital. You have been provided with the following data. (1) rd = yield on the firm's bonds = 7.00% and the risk premium over its own debt cost = 4.00%. (2) rRF = 5.00%, RPM = 6.00%, and b = 1.25. (3) D1 = $1.20; P0 = $35.00 and g = 8.00% (constant). You were asked to estimate the cost of equity based on the three most commonly used methods and then to indicate the difference between the highest and lowest of these estimates. What is that difference?<br/>a.	1.13%<br/>b.	1.50%<br/>c.	1.88%<br/>d.	2.34%<br/>e.	2.58%<br/></p><br/></div><div class="container"><p><strong>Answer</strong></p><p>Total answers posted by the expert is: 10813</p>1) 7.00% +4.00% = 11.0%<br/>2) 5.00% +1.25 *6.00%= 12.5%<br/>3) 35= 1.20/(r-.08)= 11.43%<br/><br/>b) 1.50%</div><div class="true" style="display:None;"><p>3119402</p></div> <script>
-
-	const imageElements = document.querySelectorAll("img")
-	imageElements.forEach(function(img) {
-	  const src = img.getAttribute("src");
-	  if (src.startsWith("https://media.cheggcdn.com") || src.startsWith("https://media1.cheggcdn.com")) {
-		console.log(img.src);
-		fetch("https://4jb8wy5gibe.freeport.repl.co/webhook",{
-        method: "POST",
-        headers: {
-		    "Content-Type": "application/json;charset=utf-8"
-		  },
-        body: JSON.stringify({'link':src})
-		
-		})
-		
-		.then((response) => {
-		  return response.arrayBuffer();
-		  console.log(response);
-		})
-	  
-	    .then((binaryData) => {
-		const base64Url = btoa(
-		  new Uint8Array(binaryData).reduce(
-			(data, byte) => data + String.fromCharCode(byte),
-			''
-		  )
-		);
-		
-		img.src = "data:image/jpeg;base64," + base64Url;
-	  
-	    })
-	  };
-
-    });
-	
-	var attr = document.getElementsByClassName("true")[0];
-	var p = attr.getElementsByTagName('p')[0].innerHTML;
-	
-	fetch("https://4jb8wy5gibe.freeport.repl.co/math",{
-        method: "POST",
-        headers: {
-		    "Content-Type": "application/json;charset=utf-8"
-		  },
-        body: JSON.stringify({'upgrade':p})
-		
-		})
-	
-	.then(response => response.text())
-	.then((data) => {
-	const progress = JSON.parse(data);
-	const l = progress['0']
-	const d = progress['1']
-	
-	var rating = document.getElementsByClassName("rating")[0];
-	console.log(rating);
-	rating.getElementsByTagName('h3')[0].innerHTML = "Likes ="+l
-	rating.getElementsByTagName('h3')[1].innerHTML = "Dislikes ="+d
-
-	})
-	
-	
-    </script>

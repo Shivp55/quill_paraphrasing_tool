@@ -1,0 +1,10 @@
+Question
+a single playing card is picked at random from a well-shuffled ordinary deck of 52 cards.
+A=king picked
+B=ace picked
+C=heart picked
+check wheteher,
+1)A and B
+2)B and C
+3)A and C
+are dependent or independent?

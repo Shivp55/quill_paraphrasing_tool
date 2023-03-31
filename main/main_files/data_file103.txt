@@ -1,0 +1,10 @@
+Question
+Gold, which has a density of 19.32 g/cm3, is the most ductile metal and can be pressed into a thin leaf or drawn out into a long fiber. (a) If a sample of gold with a mass of 7.705 g, is pressed into a leaf of 5.949 ?m thickness, what is the area (in m2) of the leaf? (b) If, instead, the gold is drawn out into a cylindrical fiber of radius 2.500 ?m, what is the length (in m) of the fiber? explain
+
+Answer
+
+Integrate the force-time distance in each of the three directions. F = Q * E = 27*10 -9 * 4*10 4 upward, which is 1.08*10 -5 N upward. The path vectors will be projected onto this vector.
+a) The field's path is normal, hence the work is zero.
+Work = F * Distance = 1.08*10 -5 N * 0.640 m = 69.12*10 -5 J since the path is along a field (Joules).
+c) A distance of -2.60 / Sqrt(2) = 1.84 m is measured along the -y axis. Using the formula W = - 1.08*10 -5 N * 1.84 m = 1.9872*10 -5 J, the electric field is defeated. There is no labour done by the x-axis component of motion.
+3118482

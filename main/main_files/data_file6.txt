@@ -1,0 +1,11 @@
+Question
+Gold, which has a density of 19.32 g/cm3, is the most ductile metal and can be pressed into a thin leaf or drawn out into a long fiber. (a) If a sample of gold with a mass of 7.705 g, is pressed into a leaf of 5.949 ?m thickness, what is the area (in m2) of the leaf? (b) If, instead, the gold is drawn out into a cylindrical fiber of radius 2.500 ?m, what is the length (in m) of the fiber? explain
+
+Answer
+
+within laminar flow.
+
+By taking into account the forces operating on a fluid cylinder in a pipe, the following equation for head loss due to friction can be developed:
+where hf=32uLV/D2?g and L=the length of the pipe portion under consideration (m)
+9.81 m/s2 is the acceleration caused by gravity.
+3118728

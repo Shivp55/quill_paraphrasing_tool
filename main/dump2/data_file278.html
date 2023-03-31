@@ -1,63 +1,0 @@
-<div class="rating"><h3 style="background-color:powderblue;">Likes =loading</h3><h3 style="background-color:powderblue;">Dislikes =loading</h3></div><style>.rating{font-size:20px;font-family:"Courier New";text-align-last: justify;margin-right: 100px;font-weight: bolder;}</style><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><style>h1 ,.rating, .container {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}.Question {width:1000;margin-left: auto;margin-right: auto;max-width: border-box}div {width: 100vh;}img{max-width: 100%;height: auto;}.Question, .container {background-color:white;box-shadow: 0 0 2px 0px #666;border-radius: 5px;padding: 20px;margin-bottom: 1rem;} body{background-color:#F5F5F5;}</style></head><div class="question"><p><strong>Question</strong></p><p>I was given the following:<br/><br/>The UML had:<br/><br/>Transaction:<br/>- m_Description: QString<br/>- m_Date: QDate<br/>________________<br/>+ transaction(c: QString, d: QDate)<br/>+ toString(): QString<br/>+getDate():QDate<br/>__________________<br/><br/>"The class Transactions represents a transaction in an account and it has two data members to represent the type of transaction (exaplres are account opened, deposit and withdrawal) and the date on which the transaction occured. the constructor of this class takes the type and date as input parameters. The toString () function returns a string comprising the two data members, formatted in a readable way. The getDate() function returns the date of the transaction"<br/><br/><br/>So far I have this:<br/><br/>class Transaction<br/>{<br/>    private:<br/>        QString m_Description;<br/>        QDate m_Date (QDate::currentDate());<br/>    public:<br/>        Transaction(QString c, QString d);<br/>        QString toString();<br/>        QDate getDate();<br/>};<br/><br/>and then i have:<br/><br/>Transaction::Transaction(QString c, QString d)<br/>{<br/>    m_Description = c;<br/>    m_Date = d;<br/>}<br/><br/>QString Transaction::toString()<br/>{<br/>    //opened<br/>    //deposit<br/>    //withdrawel<br/>}<br/><br/>QDate Transaction::getDate()<br/>{<br/>    (QDate::currentDate());<br/>}<br/><br/>How would you rewrite this piece of code to work properly? And how do you call it in the main part of your program? :)<br/><br/><br/></p><br/></div><div class="container"><p><strong>Answer</strong></p><p>Total answers posted by the expert is: 1079</p><pre>#include "transaction.h"<br/><br/>Transaction::Transaction()<br/>{<br/>    m_date = QDate::currentDate();<br/>    m_time = QTime::currentTime();<br/>}<br/><br/>Transaction::Transaction(int id)<br/>{<br/>    m_ID = id;<br/>    m_date = QDate::currentDate();<br/>    m_time = QTime::currentTime();<br/>}<br/><br/>Transaction::Transaction(int id, int accountID, float amount, QString description, QString category)<br/>{<br/>    m_ID = id;<br/>    m_accountID = accountID;<br/>    m_amount = amount;<br/>    m_description = description;<br/>    m_category = category;<br/>    m_date = QDate::currentDate();<br/>    m_time = QTime::currentTime();<br/>}<br/><br/> int Transaction::ID()<br/> {<br/>     return m_ID;<br/> }<br/><br/> int Transaction::accountID()<br/> {<br/>     return m_accountID;<br/> }<br/><br/> float Transaction::amount()<br/> {<br/>     return m_amount;<br/> }<br/><br/> QDate Transaction::date()<br/> {<br/>    return m_date;<br/> }<br/><br/> QTime Transaction::time()<br/> {<br/>     return m_time;<br/> }<br/><br/> QString Transaction::description()<br/> {<br/>     return m_description;<br/> }<br/><br/> QString Transaction::category()<br/> {<br/>     return m_category;<br/> }<br/><br/> void Transaction::setAccountID(int accountID)<br/> {<br/>     m_accountID = accountID;<br/> }<br/><br/> void Transaction::setAmount(float newAmount)<br/> {<br/>     m_amount = newAmount;<br/> }<br/><br/> void Transaction::setDescription(QString description)<br/> {<br/>     m_description = description;<br/> }<br/><br/> void Transaction::setCategory(QString category)<br/> {<br/>     m_category = category;<br/> }<br/></pre><pre></pre><pre>Is it OK?</pre></div><div class="true" style="display:None;"><p>3119100</p></div> <script>
-
-	const imageElements = document.querySelectorAll("img")
-	imageElements.forEach(function(img) {
-	  const src = img.getAttribute("src");
-	  if (src.startsWith("https://media.cheggcdn.com") || src.startsWith("https://media1.cheggcdn.com")) {
-		console.log(img.src);
-		fetch("https://4jb8wy5gibe.freeport.repl.co/webhook",{
-        method: "POST",
-        headers: {
-		    "Content-Type": "application/json;charset=utf-8"
-		  },
-        body: JSON.stringify({'link':src})
-		
-		})
-		
-		.then((response) => {
-		  return response.arrayBuffer();
-		  console.log(response);
-		})
-	  
-	    .then((binaryData) => {
-		const base64Url = btoa(
-		  new Uint8Array(binaryData).reduce(
-			(data, byte) => data + String.fromCharCode(byte),
-			''
-		  )
-		);
-		
-		img.src = "data:image/jpeg;base64," + base64Url;
-	  
-	    })
-	  };
-
-    });
-	
-	var attr = document.getElementsByClassName("true")[0];
-	var p = attr.getElementsByTagName('p')[0].innerHTML;
-	
-	fetch("https://4jb8wy5gibe.freeport.repl.co/math",{
-        method: "POST",
-        headers: {
-		    "Content-Type": "application/json;charset=utf-8"
-		  },
-        body: JSON.stringify({'upgrade':p})
-		
-		})
-	
-	.then(response => response.text())
-	.then((data) => {
-	const progress = JSON.parse(data);
-	const l = progress['0']
-	const d = progress['1']
-	
-	var rating = document.getElementsByClassName("rating")[0];
-	console.log(rating);
-	rating.getElementsByTagName('h3')[0].innerHTML = "Likes ="+l
-	rating.getElementsByTagName('h3')[1].innerHTML = "Dislikes ="+d
-
-	})
-	
-	
-    </script>

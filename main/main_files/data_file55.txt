@@ -1,0 +1,9 @@
+Question
+Gold, which has a density of 19.32 g/cm3, is the most ductile metal and can be pressed into a thin leaf or drawn out into a long fiber. (a) If a sample of gold with a mass of 7.705 g, is pressed into a leaf of 5.949 ?m thickness, what is the area (in m2) of the leaf? (b) If, instead, the gold is drawn out into a cylindrical fiber of radius 2.500 ?m, what is the length (in m) of the fiber? explain
+
+Answer
+
+Thus, using vector notation, express it as follows: a = 28cos45 I + 28 sin 45 j = 19.7989 I + 19.7989j b = 12cos30 j = 10.3923 I -6j
+as a result, consequent = a + b = (19.7989+10.3923)i + (19.7989-6)
+j = 30.1912i+13.7989j
+Angle = arctan(y/x) = arctan(13.7989/30.1912) = 24.56 degrees above the x-axis. Magnitude =â30.1912 2 + 13.7989 2 = 33.1952 units. 3119252
